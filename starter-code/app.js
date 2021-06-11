@@ -84,7 +84,9 @@ function sumArray(sumArr) { //eslint-disable-line
   let firstSum = sum(sumArr[0], sumArr[1])[0];
   let secondSum = sum(firstSum, sumArr[2])[0];
   console.log(secondSum);
+  console.log(typeof(secondSum));
   let sumString = sumArr[0] + "," +sumArr[1]+ "," +sumArr[2]+ " was passed in as an array of numbers, and " +secondSum+ " is their sum.";
+  console.log(typeof(sumString));
   console.log(sumString);
   return (secondSum, sumString);
 }
@@ -107,11 +109,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let firstProduct = multiply(multArr[0], multArr[1])[0];
+  let secondProduct = multiply(firstProduct, multArr[2])[0];
+  let multiplyString = "The numbers "+multArr[0]+","+multArr[1]+","+multArr[2]+" have a product of "+secondProduct+"."
+  return [secondProduct, multiplyString];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
